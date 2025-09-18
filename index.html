@@ -2,101 +2,510 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda de Botas</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Valu´s art - Demo Bootstrap</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tu CSS -->
+‹I--link rel="stylesheet" href="css/style.css"› - Si tienes una carpeta "css' --›
+‹| --Tu CSS (misma carpeta que index.html) --
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Tienda de Botas</h1>
-    <nav id="menu">
-      <a href="#">Inicio</a>
-      <a href="#productos">Catálogo</a>
-      <a href="#sobre-nosotros">Sobre Nosotros</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-  </header>
-
-  <!-- Carrusel -->
-  <section class="carrusel">
-    <div class="slides">
-      <img src="img/bota1.jpg" alt="Bota 1">
-      <img src="img/bota2.jpg" alt="Bota 2">
-      <img src="img/bota3.jpg" alt="Bota 3">
-    </div>
-    <button class="prev" onclick="moverSlide(-1)">&#10094;</button>
-    <button class="next" onclick="moverSlide(1)">&#10095;</button>
-  </section>
-
-  <main>
-    <!-- Catálogo -->
-    <section class="productos" id="productos">
-      <h2>Nuestros Modelos</h2>
-      <div class="grid">
-        <!-- Card 1 -->
-        <div class="producto">
-          <img src="Manupulacion card/ManipulacionCard/img/botas.jpg" alt="Bota Clásica">
-          <h3>Bota Clásica</h3>
-          <p class="precio">$1200 MXN</p>
-          <button class="btn" onclick="agregarCarrito('Bota Clásica', 1200)">Agregar al carrito</button>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="producto">
-          <img src="Manupulacion card/ManipulacionCard/img/BOOTS.jpg" alt="Bota de Montaña">
-          <h3>Bota de Montaña</h3>
-          <p class="precio">$1500 MXN</p>
-          <button class="btn" onclick="agregarCarrito('Bota de Montaña', 1500)">Agregar al carrito</button>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="producto">
-          <img src="BOOTS.jpg" alt="Bota Casual">
-          <h3>Bota Casual</h3>
-          <p class="precio">$1000 MXN</p>
-          <button class="btn" onclick="agregarCarrito('Bota Casual', 1000)">Agregar al carrito</button>
+  <!-- ========================= NAVBAR ========================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <!-- Logo + Marca -->
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+        <img src="OIP.webp" alt=" Valu´s" width="40" height="40" class="me-2">
+        alu´s Art 
+      </a>
+      <!-- Botón hamburguesa -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Menú -->
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Sucursales</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#carruselDemo">Más sobre nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalDemo">Menú</a>
+          </li>
+        </ul>
+  <!-- Botón Offcanvas -->
+  <div class="ms-lg-3 mt-3 mt-lg-0">
+    <button class="btn btn-outline-light"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight">
+      Galería 
+    </button>
+  </div>
+</div>
+</div> <!-- /container del navbar -->
+</nav> <!-- /navbar -->
+      
+  <!-- ========================= ACORDEÓN ========================= -->
+<section id="acordeonDemo" class="py-4">
+  <div class="container">
+    <div class="accordion" id="accordion1">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Sede pricipal 
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordion1">
+          <div class="accordion-body"> <a href= "https://www.bing.com/maps?&ty=18&ss=ypid.YN9001x8387223637721034616&mb=19.284664~-99.664063~19.273747~-99.653807&description=Calle%20Andr%C3%A9s%20Quintana%20Roo%20817%2C%2050120%20Toluca%2C%20State%20of%20Mexico%C2%B7Centro%20m%C3%A9dico&cardbg=%23FFFFFF&dt=1756321200000&tt=Residencial%20Col%C3%B3n%20y%20Col%20Cipr%C3%A9s&tsts0=%2526ty%253D18%2526ss%253Dypid.YN9001x8387223637721034616%2526mb%253D19.284664~-99.664063~19.273747~-99.653807%2526description%253DCalle%252520Andr%2525C3%2525A9s%252520Quintana%252520Roo%252520817%25252C%25252050120%252520Toluca%25252C%252520State%252520of%252520Mexico%2525C2%2525B7Centro%252520m%2525C3%2525A9dico%2526cardbg%253D%252523FFFFFF%2526dt%253D1756321200000&tstt0=Residencial%20Col%C3%B3n%20y%20Col%20Cipr%C3%A9s&cp=19.278998~-99.667938&lvl=16.116829&pi=0&ftst=0&ftics=False&v=2&sV=2&form=S00027"> Ubicación Residencial Colón y Col Cipré
+            General Venustiano Carranza 122, Toluca, Mex, 50130 Toluca, México </a></div>
         </div>
       </div>
-    </section>
-
-    <!-- Carrito -->
-    <aside class="carrito" id="carrito">
-      <h2>🛒 Carrito</h2>
-      <ul id="lista-carrito"></ul>
-      <p>Total: <span id="total">0</span> MXN</p>
-    </aside>
-  </main>
-
-  <!-- Info -->
-  <section class="info" id="sobre-nosotros">
-    <h2>Sobre Nuestra Tienda</h2>
-    <p>
-      En <strong>Tienda de Botas</strong> llevamos más de 10 años ofreciendo calzado de la más alta calidad. 
-      Nos especializamos en botas clásicas, de montaña y casuales, siempre combinando estilo, comodidad y durabilidad.
-    </p>
-    <p>
-      Trabajamos con materiales premium y con artesanos expertos, garantizando que cada par de botas sea único. 
-      Nuestra misión es acompañarte en cada paso con confianza y elegancia.
-    </p>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Contacto 
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+          <div class="accordion-body">Reservar ahora</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ======================= FIN ACORDEÓN ======================= -->
+ <!-- ========================= COLLAPSE SIMPLE ========================= -->
+<section id="collapseDemo" class="py-4">
+  <div class="container">
+    <!-- Botón para activar el colapso -->
+    <button class="btn btn-primary"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapse1"
+            aria-expanded="false"
+            aria-controls="collapse1">
+      Conocenos
+    </button>
+    <!-- Contenido colapsable -->
+    <div class="collapse mt-3" id="collapse1">
+      <div class="card card-body">
+       Tenemos actividades recreativas, ven a conocernos y pasa un INOLVIDABLE EXPERIENCIA!.
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- ========================= CARRUSEL ========================= -->
+  <section id="carruselDemo" class="py-4">
+    <div class="container">
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+        </div>
+        <!-- Slides -->
+        <div class="carousel-inner rounded shadow">
+          <div class="carousel-item active">
+            <img src="descarga.webp" class="d-block w-20" alt="Imagen 1">
+          </div>
+          <div class="carousel-item">
+            <img src="a3ef2e40-cfec-4c6c-9097-ba778929e8fd.png" class="d-block w-100" alt="Imagen 2">
+          </div>
+          <div class="carousel-item">
+            <img src="6rvsnz.jpg" class="d-block w-100" alt="Imagen 3">
+          </div>
+        </div>
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
   </section>
+  <!--Practica-->
+  <!-- ====== SESION 16 ====== -->
+<section class="py-4"></section>
+ <div class="container">
+    <h4 class="mb-3">Pantalla md:2 arriba y 1 abajo</h4>
+    <div class="row g-3 align-items-stretch">
 
-  <!-- Contacto -->
-  <section class="contacto" id="contacto">
-    <h2>Contáctanos</h2>
-    <p>¿Tienes dudas o quieres hacer un pedido especial? Escríbenos:</p>
+    <!--==Columna 1==-->
+      <div class="col-12 col-md-8">
+        <div class="p-3 bg-primary text-white text center rounded h-100">
+          Columna 1
+        </div>
+      </div>
+      <!--==Columna 2==-->
+        <div class="col-12 col-md-4">
+          <div class="p-3 bg-danger text-white text center rounded h-100">
+            Columna 2
+          </div>
+        </div>
+      <!--==Columnas 3==-->
+        <div class="col-12">
+          <div class="p-3 bg-success text-white text center rounded h-100">
+            Columna 3
+          </div>
+        </div>
+
+</div>
+  </div>
+</section>
+<section class="py-4">
+  <div class="container">
+    <h4 class="mb-3">Grid de 3 columnas</h4>
+    <div class="row g-3 boorder rounded p-3">
+      <div class="col-12 col-md-4">
+        <div class="p-3 bd-success text dark rounded h-100">Columna 1</div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="p-3 bd-danger text white rounded h-100">Columna 2</div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="p-3 bd-danger text dark rounded h-100">Columna 3</div>
+      </div>
+   </div>
+   <p class="small text-muted mt 2">
+    En pantallas pequeñas (móviles) cada columna ocupa todo el ancho (12 de 12).
+   </p>
+  </div>
+  <section class="py-4">
+    <div class="container">
+      <h4 class="mb-3">Ejemplos de espaciados y grid</h4>
+      <!--Estructura de espaciados-->
+      <div class="bg-warning text-dark p-2 mb-1">mb-1 margen inferior</div>
+      <div class="bg-success p-2 mb-3">mb-3 margen inferior 16px</div>
+      <div class="bg-info p-2 mb-5">mb-5 margen inferior 32px</div>
+      <p class="small text-muted">
+        Observa como cambia el espacio entre las cajas al cambiar el número...
+      </p>
+      <hr class="my-4 "> <!--my-4 aplica margen vertcal (top y bottom) de 16 px-->
+      <h4 class="mb-3">Grid (col-md-4 vs col-md-6)</h4>
+    </div>
+  </section>
+  
+  <!-- ========================= CONTENIDO ========================= -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2>Valu´s Art </h2>
+      <p class="lead">Usa el menú para Selecionar la Actividad de Interes.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDemo">
+        Abrir Menú
+      </button>
+    </div>
+  </section>
+  <!-- ========================= MODAL ========================= -->
+  <div class="modal fade" id="modalDemo" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Talleres de Dibujo, Artesania y Pintura</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Dibujo, Artesanias y Pintura</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ========================= MODAL ========================= -->
+<div class="modal fade" id="modalDemo" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg"> <!-- modal-lg para más espacio -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Dibujo, Artesanias y Pintura</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="modal-body">
+        <!-- ========================= TABS EN MODAL ========================= -->
+        <ul class="nav nav-tabs" id="modalTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab"
+                    data-bs-target="#tab1" type="button" role="tab"
+                    aria-controls="tab1" aria-selected="true">
+              Cursos: Dibujo, Artesanias y Pintura
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab2-tab" data-bs-toggle="tab"
+                    data-bs-target="#tab2" type="button" role="tab"
+                    aria-controls="tab2" aria-selected="false">
+              Precios: $500
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab3-tab" data-bs-toggle="tab"
+                    data-bs-target="#tab3" type="button" role="tab"
+                    aria-controls="tab3" aria-selected="false">
+              Contacto: 7222508723
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content p-3 border border-top-0" id="modalTabContent">
+          <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+            <p>Dibujo Pintura y Artesanias</p>
+          </div>
+          <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+            <p>500$ cualquier actividad y si eres estudiante te damos el 10% de descuento</p>
+          </div>
+          <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+            <p>Facebook: Danaeri Solis</p>
+          </div>
+        </div>
+        <!-- ======================= FIN TABS EN MODAL ======================= -->
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- ======================= FIN MODAL ======================= -->
+   <!-- ======================= FIN MODAL ======================= -->
+<!-- ========================= FORMULARIO DEMO ========================= -->
+<section id="formDemo" class="py-4">
+  <div class="container">
+    <h3>Ejemplo de Form control</h3>
     <form>
-      <input type="text" placeholder="Tu nombre" required>
-      <input type="email" placeholder="Tu correo" required>
-      <textarea placeholder="Tu mensaje" required></textarea>
-      <button class="btn" type="submit">Enviar</button>
+      <div class="mb-3">
+        <label for="exampleInput" class="form-label">Etiqueta del Campo</label>
+        <input type="text" class="form-control" id="exampleInput" placeholder="Introduce tu texto aquí">
+      </div>
     </form>
-  </section>
+  </div>
+</section>
+<!-- ======================= FIN FORMULARIO DEMO ======================= -->
+<!-- ========================= OFFCANVAS (Panel lateral derecho) ========================= -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Recursos rápidos</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p class="mb-3">Accesos útiles para tu demo:</p>
+    <div class="list-group mb-4">
+      <a href="#carruselDemo" class="list-group-item list-group-item-action">Ir al Carrusel</a>
+      <a href="#acordeonDemo" class="list-group-item list-group-item-action">Ver Acordeón</a>
+      <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#modalDemo">
+        Abrir Modal
+      </a>
+    </div>
+    <h6 class="text-muted">Tip</h6>
+    <p class="small">
+      El offcanvas no necesita JS extra. Puedes cambiar el lado usando
+      <code>offcanvas-start</code>, <code>offcanvas-end</code>,
+      <code>offcanvas-top</code> o <code>offcanvas-bottom</code>.
+    </p>
+    <!-- (Opcional) un mini formulario --> ¿Te Gustaria más información?
+    <form class="border rounded p-3">
+      <div class="mb-3">
+        <label for="correo" class="form-label">Déjame tu correo</label>
+        <input type="email" class="form-control" id="correo" placeholder="nombre@ejemplo.com">
+      </div>
+      <button type="button" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+</div>
+<!-- ======================= FIN OFFCANVAS ======================= -->
+ <!-- ========================= CHICOS AQUI INICIA EL FORMULARIO ======================== -->
+<section id="formDemo" class="py-4">
+  <div class="container">
+    <h3 class="mb-3">Formulario Interactivo <!-- aqui puedes colocar incluso un parentresis para que te sirva como guiay/o referencia--> </h3>
+    <!--
+      Este formulario usa .needs-validation y novalidate
+      para aplicar validación de Bootstrap con mi JS.
+      Cada control tiene su <label> e incluye mensajes de error.
+    -->
+    <form class="row g-3 needs-validation" novalidate>
+      <!-- Campo de texto -->
+      <div class="col-md-6">
+        <label for="nombre" class="form-label">Nombre completo</label> <!-- La etiqueta Label se usa para definir una eqtieuyta descriptiva, como input, textarea o select -->
+        <input
+          type="text"
+          class="form-control"
+          id="nombre"
+          name="nombre"
+          placeholder="Escribe tu nombre"
+          aria-describedby="ayudaNombre"
+          required
+        >
+        <div id="ayudaNombre" class="form-text">Tal como aparece en tu constancia.</div>
+        <div class="invalid-feedback">Por favor, escribe tu nombre.</div>
+      </div>
+      <!-- Email -->
+      <div class="col-md-6">
+        <label for="correo" class="form-label">Correo electrónico</label>
+        <input
+          type="email"
+          class="form-control"
+          id="correo"
+          name="correo"
+          placeholder="nombre@ejemplo.com"
+          required
+        >
+        <div class="invalid-feedback">Ingresa un correo válido.</div>
+      </div>
+      <!-- Input group (@usuario) -->
+      <div class="col-md-6">
+        <label for="usuario" class="form-label">Usuario de la plataforma</label>
+        <div class="input-group">
+          <span class="input-group-text" id="prefijoUsuario">@</span>
+          <input
+            type="text"
+            class="form-control"
+            id="usuario"
+            name="usuario"
+            aria-describedby="prefijoUsuario"
+            placeholder="profejoako"
+            required
+          >
+          <div class="invalid-feedback">Define un usuario.</div>
+        </div>
+      </div>
+      <!-- Select -->
+      <div class="col-md-6">
+        <label for="curso" class="form-label">Curso de interés</label>
+        <select class="form-select" id="curso" name="curso" required>
+          <option value="" selected disabled>Selecciona una opción</option>
+          <option value="ia_educacion">IA para educación</option>
+          <option value="productividad">Productividad digital</option>
+          <option value="programacion_web">Programación Web (HTML/CSS/JS)</option>
+        </select>
+        <div class="invalid-feedback">Selecciona un curso.</div>
+      </div>
+      <!-- Checkboxes, como su nombre lo indica, son casillas de verificacion -->
+      <div class="col-md-6">
+        <span class="form-label d-block mb-1">Temas que te interesan (elige varios)</span>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="tema1" name="temas[]" value="prompts">
+          <label class="form-check-label" for="tema1">Prompts y buenas prácticas</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="tema2" name="temas[]" value="apis" checked>
+          <label class="form-check-label" for="tema2">Consumo de APIs (seleccionado por defecto)</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="tema3" name="temas[]" value="ux" disabled>
+          <label class="form-check-label" for="tema3">UX/UI (desactivado)</label>
+        </div>
+      </div>
+      <!-- Radios, los cuales son importantes para que el usuaerio seleccione solo una opcion -->
+      <div class="col-md-6">
+        <span class="form-label d-block mb-1">Modalidad preferida</span>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="modalidad" id="mod1" value="presencial" required>
+          <label class="form-check-label" for="mod1">Presencial</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="modalidad" id="mod2" value="en_linea" checked>
+          <label class="form-check-label" for="mod2">En línea (seleccionada por defecto)</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="modalidad" id="mod3" value="hibrida" disabled>
+          <label class="form-check-label" for="mod3">Híbrida (desactivada)</label>
+          <div class="invalid-feedback">Elige una modalidad.</div>
+        </div>
+      </div>
+      <!-- Textarea con label flotante -->
+      <div class="col-12">
+        <div class="form-floating">
+          <textarea
+            class="form-control"
+            placeholder="Escribe tu mensaje"
+            id="mensaje"
+            name="mensaje"
+            style="height: 120px"
+            required
+          ></textarea>
+          <label for="mensaje">Mensaje</label>
+          <div class="invalid-feedback">Cuéntame brevemente tu necesidad.</div>
+        </div>
+      </div>
+      <!-- Archivo (opcional) -->
+      <div class="col-md-6">
+        <label for="archivo" class="form-label">Adjunta un archivo (opcional)</label>
+        <input class="form-control" type="file" id="archivo" name="archivo" accept=".pdf,.png,.jpg">
+        <div class="form-text">PDF o imagen (máx. 5 MB).</div>
+      </div>
+      <!-- Botones -->
+      <div class="col-12 d-flex gap-2">
+        <button class="btn btn-primary" type="submit">Enviar</button>
+        <button class="btn btn-outline-secondary" type="reset">Limpiar</button>
+      </div>
+      <!-- Alerta de éxito (la muestra el JS al enviar correctamente) -->
+      <div class="col-12 d-none" id="alertaExito">
+        <div class="alert alert-success mb-0" role="alert">
+          ¡Gracias! Tu formulario se envió correctamente.
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+<!-- ======================= FIN FORMULARIO  ======================= -->
+ 
+<!-- ====== BOTÓN DE WHATSAPP ====== -->
+<a href="https://wa.me/527222508723" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
-  <footer>
-    <p>&copy; 2025 Tienda de Botas - Todos los derechos reservados</p>
-  </footer>
+<!-- Font Awesome para los íconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <script src="script.js"></script>
+<style>
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;   /* Distancia desde abajo */
+  right: 20px;    /* Distancia desde la derecha */
+  background-color: #f1a2e5;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.whatsapp-float:hover {
+  background-color: #20b954;
+  transform: scale(1.1);
+}
+</style>
+                                                                                                                                         
+  <!-- ========================= FOOTER ========================= -->
+  <footer classss="bg-dark text-white text-center py-3">
+    <a href="https://www.instagram.com/daerisolis02?igsh=eTc2ZzhzNnhwN2U2&utm_source=qr" target="_blank"class="text-white text-decoration-none"></a>
+    <i class ="fab fa-instagram" > </i> instagram 
+    </a> 
+    </footer>
+</footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" target="_blank" class="text-white text-decoration-none">
+  <!-- Tu JS -->
+ src="js/script.js"
+ </script>
 </body>
 </html>
